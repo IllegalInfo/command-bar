@@ -223,7 +223,6 @@ coroutine.wrap(UDJWXHL_fake_script)()
 		game.Players.LocalPlayer.CharacterAdded:Connect(function()
 		start()
 		end)
-		start()
 	  ------------------------------------------------------------------------------------------------------------
 	  
 		function start()
