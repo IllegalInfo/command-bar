@@ -1167,6 +1167,7 @@ Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything ( !, @, #, 
 	  SendM("[ZANEXX LCM]: Prefix Set To []] (ZANEXX)")
 	  
 	  elseif PREFIX == "none" then
+		SendM("[ZANEXX LCM]: Prefix Set To [None]")
 		PREFIX = ""
 	  end
 	  end)
