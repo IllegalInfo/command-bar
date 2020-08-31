@@ -4,7 +4,7 @@ BUY ZANEXX YOU FUCKING NIGGER ZANEXX ON TOPPPPP
 
 	$$$$$$$$\  $$$$$$\  $$\   $$\ $$$$$$$$\ $$\   $$\ $$\   $$\ 
 	\____$$  |$$  __$$\ $$$\  $$ |$$  _____|$$ |  $$ |$$ |  $$ |
-            $$  / $$ /  $$ |$$$$\ $$ |$$ |      \$$\ $$  |\$$\ $$  |
+		$$  / $$ /  $$ |$$$$\ $$ |$$ |      \$$\ $$  |\$$\ $$  |
 	   $$  /  $$$$$$$$ |$$ $$\$$ |$$$$$\     \$$$$  /  \$$$$  / 
 	  $$  /   $$  __$$ |$$ \$$$$ |$$  __|    $$  $$<   $$  $$<  
 	 $$  /    $$ |  $$ |$$ |\$$$ |$$ |      $$  /\$$\ $$  /\$$\ 
@@ -48,7 +48,7 @@ Bar.Name = "Bar"
 Bar.Parent = CMDBAR
 Bar.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 Bar.BackgroundTransparency = 1.000
-Bar.Position = UDim2.new(0.005, 0, 0.9, 0)
+Bar.Position = UDim2.new(0.37, 0, 0.9, 0)
 Bar.Size = UDim2.new(0, 553, 0, 30)
 
 MainBox.Parent = Bar
@@ -223,6 +223,7 @@ coroutine.wrap(UDJWXHL_fake_script)()
 		game.Players.LocalPlayer.CharacterAdded:Connect(function()
 		start()
 		end)
+		start()
 	  ------------------------------------------------------------------------------------------------------------
 	  
 		function start()
@@ -292,13 +293,13 @@ coroutine.wrap(UDJWXHL_fake_script)()
 
 	  SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded")
   
-  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Press ; To Open The Command Bar, Commands Printed In The Console (F9)")
+  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Default Prefix Is Set To: ]")
 
 ------------------------------------------------------------------------------------------------------------
 	
 
 	
-------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------\
   
 	
 	function Fly()
