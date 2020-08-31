@@ -126,152 +126,178 @@ coroutine.wrap(UDJWXHL_fake_script)()
 	
 	------------------------------------------------------------------------------------------------------------
 	
+
+
 	function SendM(v, w)
-	  local n = game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')
-	  local b = n:FindFirstChild('Chat'):Clone()
-	  local c = game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats
-	  spawn(function()
-	  for i, x in pairs(c:GetChildren()) do
-	  x.Position = x.Position + UDim2.new(0, 0, 0, -15)
-	  end
-		b.Parent = c
-		b.Text = v.." "
-		b.TextColor3 = w
-		wait(15) 
-		for y = 0, 1, 0.1 do 
-		wait(0.1)
-		b.TextStrokeTransparency = 1
-		b.TextTransparency = y 
-		end
-		b:Destroy()
-		end)
-		end
-		
-	------------------------------------------------------------------------------------------------------------
-	
-		function Message(v, z, w)
 		local n = game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')
 		local b = n:FindFirstChild('Chat'):Clone()
 		local c = game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats
-		  spawn(function()
-		  for i, x in pairs(c:GetChildren()) do
-		  x.Position = x.Position + UDim2.new(0, 0, 0, -15)
-		  end
+		spawn(function()
+		for i, x in pairs(c:GetChildren()) do
+		x.Position = x.Position + UDim2.new(0, 0, 0, -15)
+		end
 		  b.Parent = c
-		  b.Text = v.." "..z
-		  wait(13)
-		  for y = 0, 1, 0.1 do
-		  wait(0.1)
-		  b.TextStrokeTransparency=1
-		  b.TextTransparency = y
-		  end
-		  b:Destroy()
-		  end)
-		  end
+		  b.Text = v.." "
+				  b.TextStrokeTransparency = 0
+		  b.TextTransparency = .1
+					  b.TextColor3 = Color3.fromRGB(0, 0, 0)
+				  while true do
+				   for a = 1,360,1 do wait(.01)
+					b.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
+				   end
+				   break
+				   end
+				   for y = 0, 1, 0.1 do
+			wait(0.1)
+			b.TextStrokeTransparency=1
+			b.TextTransparency = y
+			end
+  end)
+  end
+  
 		  
-	------------------------------------------------------------------------------------------------------------     
-	
-		  for i, x in pairs(game.Players:GetChildren()) do
-		  x.Chatted:Connect(function(A)
-		  if string.find(A, "/e ") then
-		  Message(x.Name..": ", A)
-		  end 
-		  end)
-		  end
-		  
-	------------------------------------------------------------------------------------------------------------
-	
-			local B = game:GetService("Players")
-			local C = B.LocalPlayer.Name;
-			local D = {'Player', 'Player1'}
-			local E = {'Player, Player1'}
-			local F = {}
-			local G = {}
-			local H = {}
-			local I = false
+	  ------------------------------------------------------------------------------------------------------------
+	  
+		  function Message(v, z, w)
+		  local n = game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')
+		  local b = n:FindFirstChild('Chat'):Clone()
+		  local c = game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats
+			spawn(function()
+			for i, x in pairs(c:GetChildren()) do
+			x.Position = x.Position + UDim2.new(0, 0, 0, -15)
+			end
+			b.Parent = c
+			b.Text = v.." "..z
+			wait(13)
+			for y = 0, 1, 0.1 do
+			wait(0.1)
+			b.TextStrokeTransparency = .5
+			b.TextTransparency = .7
+			end
+			b:Destroy()
+			end)
+			end
 			
-	------------------------------------------------------------------------------------------------------------  
-	
-			function start()
-			game:GetService('RunService').Stepped:connect(function()
-			  local n = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")
-			  if n then 
-			  for i, x in pairs(n.Chats:GetChildren()) do
-				if x.Name == "Chat" then
-				if string.find(x.Text, "/e") then
-				x.Text = string.gsub(x.Text, "", "") 
-				x.TextColor3 = Color3.fromRGB(100, 100, 100)
+	  ------------------------------------------------------------------------------------------------------------     
+	  
+			for i, x in pairs(game.Players:GetChildren()) do
+			x.Chatted:Connect(function(A)
+			if string.find(A, "/e ") then
+			Message(x.Name..": ", A)
+			end 
+			end)
+			end
+			
+	  ------------------------------------------------------------------------------------------------------------
+	  
+			  local B = game:GetService("Players")
+			  local C = B.LocalPlayer.Name;
+			  local D = {'Player', 'Player1'}
+			  local E = {'Player, Player1'}
+			  local F = {}
+			  local G = {}
+			  local H = {}
+			  local I = false
+			  
+	  ------------------------------------------------------------------------------------------------------------  
+	  
+			  function start()
+			  game:GetService('RunService').Stepped:connect(function()
+				local n = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")
+				if n then 
+				for i, x in pairs(n.Chats:GetChildren()) do
+				  if x.Name == "Chat" then
+				  if string.find(x.Text, "/e") then
+				  x.Text = string.gsub(x.Text, "[CHAT LOG]", "", "")
+				  x.TextColor3 = Color3.fromRGB(100, 100, 100)
+				end
 			  end
 			end
 		  end
+		  end)
 		end
-		end)
-	  end
+		
+	  ------------------------------------------------------------------------------------------------------------
 	  
-	------------------------------------------------------------------------------------------------------------
-	
-	  start()
-	  game.Players.LocalPlayer.CharacterAdded:Connect(function()
-	  start()
-	  end)
-	  start()
-	------------------------------------------------------------------------------------------------------------
-	
-	  function start()
-		game:GetService('RunService').Stepped:connect(function()
-		local n = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then
-		for i, x in pairs(n.Chats:GetChildren()) do
-		  if x.Name == "Chat" then 
----------------------------------------------------------------------------------
-		  if string.find(x.Text, "exclusiveclique") then
-		  x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
-		  x.TextTransparency = 0
-			x.TextStrokeTransparency = .1
-                x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-                x.TextColor3 = Color3.fromRGB(0, 0, 0)
-                while true do
-                 for a = 1,360,1 do wait(.01)
-                  x.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
-                 end
-                end
+		start()
+		game.Players.LocalPlayer.CharacterAdded:Connect(function()
+		start()
+		end)
+		start()
+	  ------------------------------------------------------------------------------------------------------------
+	  
+		function start()
+		  game:GetService('RunService').Stepped:connect(function()
+		  local n = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then
+		  for i, x in pairs(n.Chats:GetChildren()) do
+			if x.Name == "Chat" then 
+  ---------------------------------------------------------------------------------
+		   if string.find(x.Text, "exclusiveclique") then 
+				  x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
+				  x.TextTransparency = 0
+				  x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+				  x.TextColor3 = Color3.fromRGB(0, 0, 0)
+				  while true do
+				   for a = 1,360,1 do wait(.01)
+					x.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
+				   end
+				  end
+				  
+				  elseif string.find(x.Text, "SenpaiiBailey") then
+					  x.Text = string.gsub(x.Text, "SenpaiiBailey", "[VIP] SenpaiiBaiIey" )
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+			  
+				  elseif string.find(x.Text, "lozUwUzol") then
+					  x.Text = string.gsub(x.Text, "lozUwUzol", "[VIP] IozUwUzoI")
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+  
+  
+				  elseif string.find(x.Text, "AWPISOPAF") then
+					  x.Text = string.gsub(x.Text, "AWPISOPAF", "[VIP] AWPlSOPAF")
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+			  
+			  
+				  elseif string.find(x.Text, "LILEDDY03") then
+					  x.Text = string.gsub(x.Text, "LILEDDY03", "LlLEDDY03" )
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+				  
+				  
+				  elseif string.find(x.Text, "qtiepies") then 
+					  x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
+					   x.TextStrokeTransparency = .1
+						x.TextColor3 = Color3.fromRGB(255, 255, 255)
+						spawn(function()
+						  local i = -1
+						  while true do
+							  for i=-1,1,1/changeSpeed do
+							  local f = math.abs(i)
+							  x.TextStrokeColor3 = Color3.fromRGB(
+								  255 * (color1.r + (color2.r - color1.r) * f),
+								  255 * (color1.g + (color2.g - color1.g) * f), 
+								  255 * (color1.b + (color2.b - color1.b) * f))
+							  wait(0.05)
+			  end
+			  end
+			  end)
+			  end
+			  -----------------------------------------------------------------
+			  end
+			  end
+			  end
+			  end)
+			  end
+			  
+			  start()
+			  
+	  local Pname = game.Players.LocalPlayer.Name
 
----------------------------------------------------------------------------------
-		  if string.find(x.Text, "LILEDDY03") then
-		  x.Text = string.gsub(x.Text, "LILEDDY03", "[VIP] LlLEDDY03" )
-		  x.TextColor3 = Color3.fromRGB(3, 157, 252)
----------------------------------------------------------------------------------
-		  elseif string.find(x.Text, "qtiepies") then 
-		  x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
-			x.TextStrokeTransparency = .1
-			x.TextColor3 = Color3.fromRGB(255, 255, 255)
-			spawn(function()
-			  local i = -1
-			  while true do
-				  for i=-1,1,1/changeSpeed do
-					  local f = math.abs(i)
-					  x.TextStrokeColor3 = Color3.fromRGB(
-						  255 * (color1.r + (color2.r - color1.r) * f),
-						  255 * (color1.g + (color2.g - color1.g) * f), 
-						  255 * (color1.b + (color2.b - color1.b) * f))
-					  wait(0.05)
-	end
-	end
-	end)
-	end
-	end
-	end
-	end
-	end
-	end)
-	end
----------------------------------------------------------------------------------
-
-start()
+	  SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded")
+  
+  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Default Prefix Is Set To: ]")
 
 ------------------------------------------------------------------------------------------------------------
 	
-	SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded", Color3.fromRGB(0, 55, 200))
-	SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: ]", Color3.fromRGB(0, 55, 220))
+
 	
 ------------------------------------------------------------------------------------------------------------\
   
@@ -507,7 +533,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 	end
 	if not IsACmd then
 		local x = args[1]
-		SendM("[ZANEXX LCM]: "..args[1].." Is not a command", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..args[1].." Is not a command")
 	end
 end)
 
@@ -556,7 +582,7 @@ MainBox.FocusLost:Connect(function(w)
 				end
 			end
 			if not IsACmd then
-				SendM("[ZANEXX LCM]: "..args[1].." Is not a command", Color3.fromRGB(150, 122, 150))
+				SendM("[ZANEXX LCM]: "..args[1].." Is not a command")
 			end
 		end
 	end
@@ -595,7 +621,7 @@ end
 if players then
 return players
 else 
-SendM("[ZANEXX LCM]: Couldn't find [plr]", Color3.fromRGB(150, 122, 150))
+SendM("[ZANEXX LCM]: Couldn't find [plr]")
 end
 end
 
@@ -638,7 +664,7 @@ RA()
   	-----------------------------------------------------------------------------------------------------------------
 
 Zanexx("rj", "Rejoins the game that you're in.", function()
-	SendM("[ZANEXX LCM]: Rejoining..", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Rejoining..")
 	game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 end)
 
@@ -651,7 +677,7 @@ for i,v in pairs(target) do
 local plr = v.Name
 local targetplayer = v.Character.HumanoidRootPart
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z)
-	     SendM("[ZANEXX LCM]: Teleported to "..pn.."", Color3.fromRGB(150, 122, 150))
+	     SendM("[ZANEXX LCM]: Teleported to "..pn.."")
 end
 end)
 
@@ -660,7 +686,7 @@ end)
 Zanexx("ws", "Changes Walkspeed", function(args)
 local val = args[1]
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val
-		SendM("[ZANEXX LCM]: Walkspeed set to "..val.."", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Walkspeed set to "..val.."")
 end)
 	
 	-----------------------------------------------------------------------------------------------------------------
@@ -668,7 +694,7 @@ end)
 Zanexx("jp", "Changes Jumppower", function(args)
 local val = args[1]
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = val
-	SendM("[ZANEXX LCM]: Jumppower set to "..val.."", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Jumppower set to "..val.."")
 end)
 
 	-----------------------------------------------------------------------------------------------------------------
@@ -737,20 +763,20 @@ end)
 Zanexx("fov", "Lets The LocalPlayer Change The FOV", function(args)
 	local val1 = args[1]
 	game:GetService'Workspace'.Camera.FieldOfView = val1
-	SendM("[ZANEXX LCM]: FOV Set to "..val1.."", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: FOV Set to "..val1.."")
 end)
 
 	-----------------------------------------------------------------------------------------------------------------
 
 Zanexx("fly", "Lets The LocalPlayer Fly", function(args)
-SendM("[ZANEXX LCM]: Press F twice to start flying", Color3.fromRGB(150, 122, 150))
+SendM("[ZANEXX LCM]: Press F twice to start flying")
 Fly()
 end)
 
 	-----------------------------------------------------------------------------------------------------------------
 
 Zanexx("ffly", "Lets The LocalPlayer Fly Faster", function(args)
-SendM("[ZANEXX LCM]: Press F twice to start flying", Color3.fromRGB(150, 122, 150))
+SendM("[ZANEXX LCM]: Press F twice to start flying")
 FFly()
 end)
 
@@ -763,7 +789,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	local pn = v.Name
 	local num = args[2]
 	game.ReplicatedStorage.Event:FireServer("PlayRadio", v, num)
-	SendM("[ZANEXX LCM]: Playing "..num.." on "..pn.."", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Playing "..num.." on "..pn.."")
 	end
 	end)
 	
@@ -788,7 +814,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	Zanexx("rs", "Kills The LocalPlayer", function(args)
 	local lp = game.Players.LocalPlayer.Character
 	lp:BreakJoints()
-	SendM("[ZANEXX LCM]: Clappedddd xDDD", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Clappedddd xDDD")
 	end)
 
 	-----------------------------------------------------------------------------------------------------------------
@@ -798,7 +824,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	
 		for i,v in pairs(target) do
 		workspace.CurrentCamera.CameraSubject = v.Character
-		SendM("[ZANEXX LCM]: Fucking Pedo Smh..", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Fucking Pedo Smh..")
 		end
 		end)
 		
@@ -813,7 +839,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	Zanexx("slock", "Enables Shiftlock For The LocalPlayer", function(args)
 		local plr = game.Players.LocalPlayer
 		plr.DevEnableMouseLock = true
-		SendM("[ZANEXX LCM]: Shiftlock Enabled", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Shiftlock Enabled")
 		end)
 
 	-----------------------------------------------------------------------------------------------------------------
@@ -834,7 +860,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		end 
 		game:service("RunService").Stepped:wait() 
 		end
-		SendM("[ZANEXX LCM]: Noclip Enabled, Say [cl] To Disable", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Noclip Enabled, Say [cl] To Disable")
 		end)
 
 	-----------------------------------------------------------------------------------------------------------------
@@ -855,7 +881,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		end 
 		game:service("RunService").Stepped:wait()
 		end
-		SendM("[ZANEXX LCM]: Noclip Disabled", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Noclip Disabled")
 		end) 
 
 	-----------------------------------------------------------------------------------------------------------------
@@ -865,7 +891,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	
 		for i,p in pairs(target) do
 		  local plrn = p.Name
-		  SendM("[ZANEXX LCM]: "..plrn.." Cloaked", Color3.fromRGB(150, 122, 150))
+		  SendM("[ZANEXX LCM]: "..plrn.." Cloaked")
 		  local x = game.Workspace.Ignore.Players:FindFirstChild(target[1])
 		  game.ReplicatedStorage.Event:FireServer("Cloak", x)
 		end
@@ -878,7 +904,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	
 		for i,p in pairs(target) do
 		  local plrn = p.Name
-		  SendM("[ZANEXX LCM]: "..plrn.." Cloaked", Color3.fromRGB(150, 122, 150))
+		  SendM("[ZANEXX LCM]: "..plrn.." Cloaked")
 		  local x = game.Workspace.Ignore.Players:FindFirstChild(target[1])
 		  game.ReplicatedStorage.Event:FireServer("UnCloak", x)
 		end
@@ -891,7 +917,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	
 		    for i,v in pairs(target) do
 			local plrn = v.Name
-			SendM("[ZANEXX LCM]: "..plrn.." Radio-Banned", Color3.fromRGB(150, 122, 150))
+			SendM("[ZANEXX LCM]: "..plrn.." Radio-Banned")
 			if v:FindFirstChild("rban") then
 			v:FindFirstChild("rban"):Destroy()
 			end
@@ -914,7 +940,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	
 		      for i,v in pairs(target) do
 			  local plrn = v.Name
-			  SendM("[ZANEXX LCM]: "..plrn.." UnRadio-Banned", Color3.fromRGB(150, 122, 150))
+			  SendM("[ZANEXX LCM]: "..plrn.." UnRadio-Banned")
 			  if v:FindFirstChild("rban") then
 			  v:FindFirstChild("rban"):Destroy()
 			  end
@@ -937,7 +963,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	
 	for i,v in pairs(target) do
 	local nm = v.Name
-	SendM("[ZANEXX LCM]: Loopkilling "..nm.."", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Loopkilling "..nm.."")
 	if v:FindFirstChild("ml") then
 	v:FindFirstChild("ml"):Destroy()
 	end
@@ -960,10 +986,10 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 	local target = findplr(args[1])
 	for i,v in pairs(target) do
 	local pn = v.Name
-	SendM("[ZANEXX LCM]: Unloopkilling "..pn.."..", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Unloopkilling "..pn.."..")
 	if v:FindFirstChild("ml") then
 	v:FindFirstChild("ml"):Destroy()
-	SendM("[ZANEXX LCM]: "..pn.." Unloopkilled", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: "..pn.." Unloopkilled")
 	end
 	end
 	end)
@@ -975,7 +1001,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		
 		for i,v in pairs(target) do
 		local pn = v.Name
-		SendM("[ZANEXX LCM]: Loopgodding "..pn.."", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Loopgodding "..pn.."")
 		if v:FindFirstChild("lg") then
 		v:FindFirstChild("lg"):Destroy()
 		end
@@ -990,7 +1016,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		end
 		end
 		end
-		SendM("[ZANEXX LCM]: "..pn.." Loopgodded", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.." Loopgodded")
 		end)
 		
 		-----------------------------------------------------------------------------------------------------------------
@@ -999,11 +1025,11 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		local target = findplr(args[1])
 		for i,v in pairs(target) do
 		local pn = v.Name
-		SendM("[ZANEXX LCM]: Breaking Loopgod For "..pn.."..", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Breaking Loopgod For "..pn.."..")
 		if plr:FindFirstChild("lg") then
 		plr:FindFirstChild("lg"):Destroy()
 		wait(.5)
-		SendM("[ZANEXX LCM]: "..pn.."'s Loopgod broken", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.."'s Loopgod broken")
 		end
 		end
 		end)
@@ -1016,7 +1042,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		for i,v in pairs(target) do
 		local pn = v.Name
 		local lp = game.Players.LocalPlayer.Name
-		SendM("[ZANEXX LCM]: "..pn.." Has been slain by "..lp.."", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.." Has been slain by "..lp.."")
 		game.ReplicatedStorage.Event:FireServer("TPD", math.huge, v.Character.Humanoid)
 		end
 		end)
@@ -1028,7 +1054,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 			
 		for i,v in pairs(target) do
 		local pn = v.Name
-		SendM("[ZANEXX LCM]: "..pn.." Poisoned", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.." Poisoned")
 		while wait() do
 		game.ReplicatedStorage.Event:FireServer("TPD", 1, v.Character.Humanoid)
 		if v.Character.Humanoid.Health == 0 then
@@ -1045,7 +1071,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 				
 		for i,v in pairs(target) do
 		local pn = v.Name
-		SendM("[ZANEXX LCM]: Loop-Healing "..pn.."", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: Loop-Healing "..pn.."")
 		local num = args[2]
 		while wait() do
 		game.ReplicatedStorage.Event:FireServer("TPD", -num, v.Character.Humanoid)
@@ -1064,7 +1090,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		for i,v in pairs(target) do
 		local pn = v.Name
 		local num = args[2]
-		SendM("[ZANEXX LCM]: "..pn.." Damaged For "..num.."", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.." Damaged For "..num.."")
 		game.ReplicatedStorage.Event:FireServer("TPD", num, v.Character.Humanoid)
 		end
 		end)
@@ -1077,7 +1103,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 		for i,v in pairs(target) do
 		local pn = v.Name
 		local num = args[2]
-		SendM("[ZANEXX LCM]: "..pn.." Healed For "..num.."", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.." Healed For "..num.."")
 		game.ReplicatedStorage.Event:FireServer("TPD", -num, v.Character.Humanoid)
 		end
 		end)
@@ -1089,7 +1115,7 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 				
 		for i,v in pairs(target) do
 		local pn = v.Name
-		SendM("[ZANEXX LCM]: "..pn.." Godded", Color3.fromRGB(150, 122, 150))
+		SendM("[ZANEXX LCM]: "..pn.." Godded")
 		game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, v.Character.Humanoid)
 		end
 		end)
@@ -1108,37 +1134,37 @@ Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
 
 
 Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything ( !, @, #, $...)", function(args)
-	SendM("[ZANEXX LCM]: Prefix Before: "..PREFIX.."", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Prefix Before: "..PREFIX.."")
 	  local pargs = args[1]
 	  PREFIX = pargs
-	  SendM("[ZANEXX LCM]: Prefix Changed To: "..PREFIX.."", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Changed To: "..PREFIX.."")
 	  
 	  if PREFIX == "!" then
-	  SendM("[ZANEXX LCM]: Prefix Set To [!] (Matts Admin)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [!] (Matts Admin)")
 	  
 	  elseif PREFIX == "." then
-	  SendM("[ZANEXX LCM]: Prefix Set To [.] (Faxng Admin)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [.] (Faxng Admin)")
 	  
 	  elseif PREFIX == ":" then
-	  SendM("[ZANEXX LCM]: Prefix Set To [:] (Aidez)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [:] (Aidez)")
 
 	  elseif PREFIX == ";" then
-	  SendM("[ZANEXX LCM]: Prefix Set To [;] (DrPoppa's Admin)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [;] (DrPoppa's Admin)")
 
 	  elseif PREFIX == "/" then
-	  SendM("[ZANEXX LCM]: Prefix Set To [/] (Terminal X)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [/] (Terminal X)")
 
 	  elseif PREFIX == "-" then
-	  SendM("[ZANEXX LCM]: Prefix Set To [-] (Fates Admin)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [-] (Fates Admin)")
 
 	  elseif PREFIX == "+" then
-	  SendM("[ZANEXX LCM]: Prefix Set To [+] (Clouds Admin)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To [+] (Clouds Admin)")
 	
 	  elseif PREFIX == "'" then
-	  SendM("[ZANEXX LCM]: Prefix Set To ['] (q5ep's Admin)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To ['] (q5ep's Admin)")
 
 	  elseif PREFIX == "]" then
-	  SendM("[ZANEXX LCM]: Prefix Set To []] (ZANEXX)", Color3.fromRGB(150, 122, 150))
+	  SendM("[ZANEXX LCM]: Prefix Set To []] (ZANEXX)")
 	  
 	  elseif PREFIX == "none" then
 		PREFIX = ""
@@ -1183,7 +1209,7 @@ Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything ( !, @, #, 
 
 	for i,v in pairs(target) do
 	local pn = v.Name
-	SendM("[ZANEXX LCM]: Annoying "..pn..".", Color3.fromRGB(150, 122, 150))
+	SendM("[ZANEXX LCM]: Annoying "..pn..".")
 	
 	local noclip = true 
 	char = game.Players.LocalPlayer.Character
@@ -1222,14 +1248,14 @@ Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything ( !, @, #, 
 			game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 			wait(1)
 			game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			SendM("[ZANEXX LCM]: Gun Teleported", Color3.fromRGB(150, 122, 150))
+			SendM("[ZANEXX LCM]: Gun Teleported")
 			end)
 	
 		-----------------------------------------------------------------------------------------------------------------
 
 		Zanexx("sptrap", "Teleports The LocalPlayer To 4 Different Corners n Auto Throws Tesla Knives", function(args)
-				SendM("[ZANEXX LCM]: Failed To Throw, Please Re-Equip Your Knife", Color3.fromRGB(150, 122, 150))
-		SendM("[ZANEXX LCM]: Press T To Stop The SpawnTrap Loop", Color3.fromRGB(150, 122, 150))
+				SendM("[ZANEXX LCM]: Failed To Throw, Please Re-Equip Your Knife")
+		SendM("[ZANEXX LCM]: Press T To Stop The SpawnTrap Loop")
 		local player = game.Players.LocalPlayer 
 		local pos = player.Character.HumanoidRootPart.CFrame
 	  
@@ -1271,18 +1297,18 @@ Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything ( !, @, #, 
 		t.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 		end
 		end
-	 	SendM("[ZANEXX LCM]: Done", Color3.fromRGB(150, 122, 150))
+	 	SendM("[ZANEXX LCM]: Done")
 		end)
 
 	-----------------------------------------------------------------------------------------------------------------
 
 	Zanexx("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", function(args)
-		SendM("Tesla", Color3.fromRGB(150, 122, 150))
-		SendM("Illum", Color3.fromRGB(150, 122, 150))
-		SendM("Quick", Color3.fromRGB(150, 122, 150))
-		SendM("Laser", Color3.fromRGB(150, 122, 150))
-		SendM("Yt", Color3.fromRGB(150, 122, 150))
-		SendM("Norelgun", Color3.fromRGB(150, 122, 150))
+		SendM("-Tesla")
+		SendM("-Illum")
+		SendM("-Quick")
+		SendM("-Laser")
+		SendM("-Yt")
+		SendM("-Norelgun")
 		end)
 		
 	-----------------------------------------------------------------------------------------------------------------
