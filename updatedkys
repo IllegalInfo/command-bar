@@ -1,0 +1,1429 @@
+local lmfao = [[.
+
+BUY ZANEXX YOU FUCKING NIGGER ZANEXX ON TOPPPPP
+
+	$$$$$$$$\  $$$$$$\  $$\   $$\ $$$$$$$$\ $$\   $$\ $$\   $$\ 
+	\____$$  |$$  __$$\ $$$\  $$ |$$  _____|$$ |  $$ |$$ |  $$ |
+		$$  / $$ /  $$ |$$$$\ $$ |$$ |      \$$\ $$  |\$$\ $$  |
+	   $$  /  $$$$$$$$ |$$ $$\$$ |$$$$$\     \$$$$  /  \$$$$  / 
+	  $$  /   $$  __$$ |$$ \$$$$ |$$  __|    $$  $$<   $$  $$<  
+	 $$  /    $$ |  $$ |$$ |\$$$ |$$ |      $$  /\$$\ $$  /\$$\ 
+	$$$$$$$$\ $$ |  $$ |$$ | \$$ |$$$$$$$$\ $$ /  $$ |$$ /  $$ |
+	\________|\__|  \__|\__|  \__|\________|\__|  \__|\__|  \__|
+
+BUY ZANEXX YOU FUCKING NIGGER ZANEXX ON TOPPPPP
+
+																]]
+
+ZANEXX = {
+	Commands = {}
+}
+
+_G.zanexx = ZANEXX
+
+local PREFIX = "]"
+local player = game.Players.LocalPlayer
+local LocalPlayer = game.Players.LocalPlayer
+local mouse = LocalPlayer:GetMouse()
+local input = game:GetService('UserInputService')
+local Pname = game.Players.LocalPlayer.Name
+local admin = game.Players.LocalPlayer.Name
+
+local plrname = game.Players.LocalPlayer.Name
+local CMDBAR = Instance.new("ScreenGui")
+local Bar = Instance.new("Frame")
+local MainBox = Instance.new("TextBox")
+local DECO = Instance.new("TextLabel")
+local Gradient = Instance.new("Frame")
+ 
+CMDBAR.Name = "CMDBAR"
+CMDBAR.Parent = game.CoreGui
+CMDBAR.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Bar.Name = "Bar"
+Bar.Parent = CMDBAR
+Bar.BackgroundColor3 = Color3.new(1, 1, 1)
+Bar.BackgroundTransparency = 1
+Bar.Position = UDim2.new(0.445799291, 0, 0.0489999987, 0)
+Bar.Size = UDim2.new(0, 429, 0, 40)
+
+MainBox.Name = "MainBox"
+MainBox.Parent = Bar
+MainBox.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
+MainBox.Position = UDim2.new(-0.00200000009, 1, 0, 0)
+MainBox.Size = UDim2.new(0, 429, 0, 24)
+MainBox.Font = Enum.Font.SourceSans
+MainBox.PlaceholderText = "Type Cmds For The Commands List"
+MainBox.Text = ""
+MainBox.TextColor3 = Color3.new(1, 1, 1)
+MainBox.TextSize = 14
+MainBox.TextXAlignment = Enum.TextXAlignment.Left
+
+DECO.Name = "DECO"
+DECO.Parent = Bar
+DECO.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
+DECO.Position = UDim2.new(-0.426573426, 0, 0, 0)
+DECO.Size = UDim2.new(0, 182, 0, 24)
+DECO.Font = Enum.Font.SourceSansSemibold
+DECO.Text = "ZANEXX:/Users/"..plrname..">"
+DECO.TextColor3 = Color3.new(1, 1, 1)
+DECO.TextScaled = true
+DECO.TextSize = 14
+DECO.TextWrapped = true
+DECO.TextXAlignment = Enum.TextXAlignment.Left
+
+Gradient.Name = "Gradient"
+Gradient.Parent = DECO
+Gradient.BackgroundColor3 = Color3.new(1, 1, 1)
+Gradient.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(-0.00499985227, 0, 0.967380822, 0)
+Gradient.Size = UDim2.new(0, 614, 0, 2)
+
+local function UDJWXHL_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', MainBox)
+
+	local color1 = Color3.fromRGB(255, 255, 255)
+	local color2 = Color3.fromRGB(255, 94, 226) 
+	local Players = game.Players
+	local changeSpeed = 10
+	spawn(function()
+				  local i = -1
+				  while true do
+					  for i=-1,1,1/changeSpeed do
+						  local f = math.abs(i)
+						  MainBox.TextStrokeColor3 = Color3.fromRGB(
+							  255 * (color1.r + (color2.r - color1.r) * f),
+							  255 * (color1.g + (color2.g - color1.g) * f), 
+							  255 * (color1.b + (color2.b - color1.b) * f))
+						  wait(0.05)
+		end
+		end
+	end)
+	
+end
+coroutine.wrap(UDJWXHL_fake_script)()
+
+
+
+
+  ------------------------------------------------------------------------------------------------------------
+  
+  if game.Lighting:FindFirstChild("already_loaded") then
+	print("[ZANEXX v2]: Already Loaded >:I")
+	Stop()
+	end
+	
+	local loaded = Instance.new("Part", game.Lighting)
+	loaded.Name = "already_loaded"
+	
+	------------------------------------------------------------------------------------------------------------
+	
+
+
+	function SendM(v, w)
+		local n = game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')
+		local b = n:FindFirstChild('Chat'):Clone()
+		local c = game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats
+		spawn(function()
+		for i, x in pairs(c:GetChildren()) do
+		x.Position = x.Position + UDim2.new(0, 0, 0, -15)
+		end
+		  b.Parent = c
+		  b.Text = v.." "
+				  b.TextStrokeTransparency = 0.1
+		  b.TextTransparency = .1
+					  b.TextColor3 = Color3.fromRGB(0, 0, 0)
+				  while true do
+				   for a = 1,360,1 do wait(.01)
+					b.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
+				   end
+				   break
+				   end
+				   for y = 0, 1, 0.1 do
+			wait(0.1)
+			b.TextStrokeTransparency = 1
+			b.TextTransparency = y
+			end
+  end)
+  end
+  
+		  
+	  ------------------------------------------------------------------------------------------------------------
+	  
+		  function Message(v, z, w)
+		  local n = game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')
+		  local b = n:FindFirstChild('Chat'):Clone()
+		  local c = game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats
+			spawn(function()
+			for i, x in pairs(c:GetChildren()) do
+			x.Position = x.Position + UDim2.new(0, 0, 0, -15)
+			end
+			b.Parent = c
+			b.Text = v.." "..z
+			wait(13)
+			for y = 0, 1, 0.1 do
+			wait(0.1)
+			b.TextStrokeTransparency = .5
+			b.TextTransparency = .7
+			end
+			b:Destroy()
+			end)
+			end
+			
+	  ------------------------------------------------------------------------------------------------------------     
+	  
+			for i, x in pairs(game.Players:GetChildren()) do
+			x.Chatted:Connect(function(A)
+			if string.find(A, "/e ") then
+			Message(x.Name..": ", A)
+			end 
+			end)
+			end
+			
+	  ------------------------------------------------------------------------------------------------------------
+	  
+			  local B = game:GetService("Players")
+			  local C = B.LocalPlayer.Name;
+			  local D = {'Player', 'Player1'}
+			  local E = {'Player, Player1'}
+			  local F = {}
+			  local G = {}
+			  local H = {}
+			  local I = false
+			  
+	  ------------------------------------------------------------------------------------------------------------  
+	  
+			  function start()
+			  game:GetService('RunService').Stepped:connect(function()
+				local n = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")
+				if n then 
+				for i, x in pairs(n.Chats:GetChildren()) do
+				  if x.Name == "Chat" then
+				  if string.find(x.Text, "/e") then
+				  x.Text = string.gsub(x.Text, "", "")
+				  x.TextColor3 = Color3.fromRGB(100, 100, 100)
+				end
+			  end
+			end
+		  end
+		  end)
+		end
+		
+	  ------------------------------------------------------------------------------------------------------------
+	  
+		start()
+		game.Players.LocalPlayer.CharacterAdded:Connect(function()
+		start()
+		end)
+		start()
+	  ------------------------------------------------------------------------------------------------------------
+	  
+		function start()
+		  game:GetService('RunService').Stepped:connect(function()
+		  local n = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then
+		  for i, x in pairs(n.Chats:GetChildren()) do
+			if x.Name == "Chat" then 
+  ---------------------------------------------------------------------------------
+		   if string.find(x.Text, "AXXTURELSHYNE") then 
+				  x.Text = string.gsub(x.Text, "AXXTURELSHYNE", "[Owner] cutie") 
+				  x.TextTransparency = 0
+				  x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+				  x.TextColor3 = Color3.fromRGB(0, 0, 0)
+				  while true do
+				   for a = 1,360,1 do wait(.01)
+					x.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
+				   end
+				  end
+				  
+				  elseif string.find(x.Text, "SenpaiiBailey") then
+					  x.Text = string.gsub(x.Text, "SenpaiiBailey", "[VIP] SenpaiiBaiIey" )
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+			  
+				  elseif string.find(x.Text, "lozUwUzol") then
+					  x.Text = string.gsub(x.Text, "lozUwUzol", "[VIP] IozUwUzoI")
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+  
+  
+				  elseif string.find(x.Text, "AWPISOPAF") then
+					  x.Text = string.gsub(x.Text, "AWPISOPAF", "[VIP] AWPlSOPAF")
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+			  
+			  
+				  elseif string.find(x.Text, "LILEDDY03") then
+					  x.Text = string.gsub(x.Text, "LILEDDY03", "LlLEDDY03" )
+					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
+				  
+				  
+				  elseif string.find(x.Text, "qtiepies") then 
+					  x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
+					   x.TextStrokeTransparency = .1
+						x.TextColor3 = Color3.fromRGB(255, 255, 255)
+						spawn(function()
+						  local i = -1
+						  while true do
+							  for i=-1,1,1/changeSpeed do
+							  local f = math.abs(i)
+							  x.TextStrokeColor3 = Color3.fromRGB(
+								  255 * (color1.r + (color2.r - color1.r) * f),
+								  255 * (color1.g + (color2.g - color1.g) * f), 
+								  255 * (color1.b + (color2.b - color1.b) * f))
+							  wait(0.05)
+			  end
+			  end
+			  end)
+			  end
+			  -----------------------------------------------------------------
+			  end
+			  end
+			  end
+			  end)
+			  end
+			  
+			  start()
+			  
+	  local Pname = game.Players.LocalPlayer.Name
+
+	  SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded")
+  
+  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Default Prefix Is Set To: ]")
+
+------------------------------------------------------------------------------------------------------------
+	
+
+	
+------------------------------------------------------------------------------------------------------------\
+  
+	
+	function Fly()
+	mouse = game.Players.LocalPlayer:GetMouse''
+	localplayer = game.Players.LocalPlayer
+	game.Players.LocalPlayer.Character:WaitForChild("Torso")
+			local torso = game.Players.LocalPlayer.Character.Torso 
+			local flying = true
+			local speed = 0
+			local keys={a=false,d=false,w=false,s=false} 
+			local e1
+			local e2
+			local function start()
+				local pos = Instance.new("BodyPosition",torso)
+				local gyro = Instance.new("BodyGyro",torso)
+				pos.Name = "EPIXPOS"
+				pos.maxForce = Vector3.new(2^1024, 2^1024, 2^1024)
+				pos.position = torso.Position
+				gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+				gyro.cframe = torso.CFrame
+				repeat
+					wait()
+					localplayer.Character.Humanoid.PlatformStand=true
+					local new=gyro.cframe - gyro.cframe.p + pos.position
+					if not keys.w and not keys.s and not keys.a and not keys.d then
+						speed=5
+					end
+					if keys.w then 
+						new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+						speed=speed+10
+					end
+					if keys.s then 
+						new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+						speed=speed+10
+					end
+					if keys.d then 
+						new = new * CFrame.new(speed,0,0)
+						speed=speed+10
+					end
+					if keys.a then 
+						new = new * CFrame.new(-speed,0,0)
+						speed=speed+10
+					end
+					if speed>5 then
+						speed=10
+					end
+					pos.position=new.p
+					if keys.w then
+						gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*15),0,0)
+					elseif keys.s then
+						gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*15),0,0)
+					else
+						gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+					end
+				until flying==false
+				if gyro then gyro:Destroy() end
+				if pos then pos:Destroy() end
+				flying=false
+				localplayer.Character.Humanoid.PlatformStand=false
+				speed=0
+			end
+			e1=mouse.KeyDown:connect(function(key)
+				if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+				if key=="w" then
+					keys.w=true
+				elseif key=="s" then
+					keys.s=true
+				elseif key=="a" then
+					keys.a=true
+				elseif key=="d" then
+					keys.d=true
+				elseif key=="f" then
+					if flying==true then
+						flying=false
+					else
+						flying=true
+						start()
+					end
+				end
+			end)
+			e2=mouse.KeyUp:connect(function(key)
+				if key=="w" then
+					keys.w=false
+				elseif key=="s" then
+					keys.s=false
+				elseif key=="a" then
+					keys.a=false
+				elseif key=="d" then
+					keys.d=false
+				end
+		  end)
+		end
+  
+  
+		function FFly()
+			mouse = game.Players.LocalPlayer:GetMouse''
+			localplayer = game.Players.LocalPlayer
+			game.Players.LocalPlayer.Character:WaitForChild("Torso")
+					local torso = game.Players.LocalPlayer.Character.Torso 
+					local flying = true
+					local speed = 0
+					local keys={a=false,d=false,w=false,s=false} 
+					local e1
+					local e2
+					local function start()
+						local pos = Instance.new("BodyPosition",torso)
+						local gyro = Instance.new("BodyGyro",torso)
+						pos.Name = "EPIXPOS"
+						pos.maxForce = Vector3.new(2^1024, 2^1024, 2^1024)
+						pos.position = torso.Position
+						gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+						gyro.cframe = torso.CFrame
+						repeat
+							wait()
+							localplayer.Character.Humanoid.PlatformStand=true
+							local new=gyro.cframe - gyro.cframe.p + pos.position
+							if not keys.w and not keys.s and not keys.a and not keys.d then
+								speed=50
+							end
+							if keys.w then 
+								new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+								speed=speed+50
+							end
+							if keys.s then 
+								new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+								speed=speed+50
+							end
+							if keys.d then 
+								new = new * CFrame.new(speed,0,0)
+								speed=speed+50
+							end
+							if keys.a then 
+								new = new * CFrame.new(-speed,0,0)
+								speed=speed+50
+							end
+							if speed>5 then
+								speed=50
+							end
+							pos.position=new.p
+							if keys.w then
+								gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*15),0,0)
+							elseif keys.s then
+								gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*15),0,0)
+							else
+								gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+							end
+						until flying==false
+						if gyro then gyro:Destroy() end
+						if pos then pos:Destroy() end
+						flying=false
+						localplayer.Character.Humanoid.PlatformStand=false
+						speed=0
+					end
+					e1=mouse.KeyDown:connect(function(key)
+						if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+						if key=="w" then
+							keys.w=true
+						elseif key=="s" then
+							keys.s=true
+						elseif key=="a" then
+							keys.a=true
+						elseif key=="d" then
+							keys.d=true
+						elseif key=="f" then
+							if flying==true then
+								flying=false
+							else
+								flying=true
+								start()
+							end
+						end
+					end)
+					e2=mouse.KeyUp:connect(function(key)
+						if key=="w" then
+							keys.w=false
+						elseif key=="s" then
+							keys.s=false
+						elseif key=="a" then
+							keys.a=false
+						elseif key=="d" then
+							keys.d=false
+						end
+				  end)
+				end
+	------------------------------------------------------------------------------------------------------------------
+
+function ParseMessage(Message)
+	local Arguments = {}
+	Message = string.lower(Message)
+	local PrefixMatch = string.match(Message, "^"..PREFIX)
+	if PrefixMatch then
+		Message = string.gsub(Message, PrefixMatch, "", 1)
+		for Argument in string.gmatch(Message, "[^%s]+") do
+			table.insert(Arguments, Argument)
+		end
+	end
+	return Arguments
+end
+
+function Zanexx(commandname, cmddesc, sc)
+	local cmdinformation = {
+		commandname
+	}
+	if sc == nil then
+		sc = cmddesc
+		cmddesc = nil
+		table.insert(cmdinformation, sc)
+	else
+		table.insert(cmdinformation, cmddesc)
+		table.insert(cmdinformation, sc)
+	end
+	table.insert(ZANEXX.Commands, cmdinformation)
+end
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+	local IsACmd = false
+	msg:lower()
+	if msg:sub(1, 3) == "/e " then
+		msg = msg:sub(4)
+	end
+	local args = ParseMessage(msg)
+	for i, cmd in pairs(ZANEXX.Commands) do
+		if args[1] == cmd[1] then
+			IsACmd = true
+			table.remove(args, 1)
+			if type(cmd[3]) == "function" then
+				cmd[3](args)
+			else
+				cmd[2](args)
+			end
+		end
+	end
+	if not IsACmd then
+		local x = args[1]
+		SendM("[ZANEXX LCM]: "..args[1].." Is not a command")
+	end
+end)
+
+Bar.Visible = false
+local UIS = game:GetService("UserInputService")
+local cntrl = false
+local visible = false
+
+UIS.InputBegan:Connect(function(input,proc)
+		if not proc then
+			if input.KeyCode.Name == "Semicolon" then
+				visible = true
+				Bar.Visible = true
+				MainBox.Text = ""
+				wait()
+				MainBox:CaptureFocus()
+			end
+		end
+	end)
+
+UIS.InputEnded:Connect(function(input)
+	if input.KeyCode.Name == "LeftAlt" then
+		cntrl = false
+	end
+end)
+
+MainBox.FocusLost:Connect(function(w)
+	local IsACmd = false
+	if w == true then
+		Bar.Visible = false
+		local text = MainBox.Text:lower()
+		if text ~= "" or text ~= " " or text ~= nil then
+			if text:sub(1, 1) ~= PREFIX then
+				text = PREFIX..text
+			end
+			local args = ParseMessage(text)
+			for i, cmd in pairs(ZANEXX.Commands) do
+				if args[1] == cmd[1] then
+					IsACmd = true
+					table.remove(args, 1)
+					if type(cmd[3]) == "function" then
+						cmd[3](args)
+					else
+						cmd[2](args)
+					end
+				end
+			end
+			if not IsACmd then
+				SendM("[ZANEXX LCM]: "..args[1].." Is not a command")
+			end
+		end
+	end
+end)
+
+
+function findplr(name)
+local players = {}
+
+if name == 'me' then
+table.insert(players, game.Players.LocalPlayer)
+
+elseif name == 'others' then
+for i,v in pairs(game:GetService('Players'):GetChildren()) do
+    if v.Name ~= game.Players.LocalPlayer.Name then
+        table.insert(players, v)
+    end
+end
+
+elseif name == 'all' then
+for i,v in pairs(game:GetService('Players'):GetChildren()) do
+    table.insert(players, v)
+end
+
+else
+local names = game.Players:GetChildren()
+for i,v in pairs(names) do
+local strlower = string.lower(v.Name)
+local sub = string.sub(strlower,1,#name)
+if name == sub then 
+local player = v
+table.insert(players, v)
+end
+end
+end
+if players then
+return players
+else 
+SendM("[ZANEXX LCM]: Couldn't find [plr]")
+end
+end
+
+
+function teleport(position)
+	position = position + Vector3.new(0, 3, 0)
+	local BP = Instance.new("BodyPosition")
+	BP.MaxForce = Vector3.new(10000, 10000, 10000)
+	BP.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+	BP.Position = position
+	for i, v in pairs(parts) do
+		v.CanCollide = false
+	end
+	repeat
+		wait()
+	until (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - position).Magnitude <= 10
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+	if BP then
+		BP:Destroy()
+	end
+	for i, v in pairs(parts) do
+		v.CanCollide = true
+	end
+end
+
+local a = setmetatable({}, {__index = function(b, c) return game:service(c) end})
+local d = {"AntiSpeedHack", "AntiDataTheft", "UI", "NO FF"}
+local e = a.Players.LocalPlayer
+local f = {}
+function RA() 
+spawn(function() a.RunService.Heartbeat:wait() for g, h in pairs(f) do h:remove() f[g] = nil end for g, h in pairs(e.PlayerGui:GetChildren()) do for g, b in pairs(d) do if b == h.Name then h:remove()end;end;end;end)end
+
+RA()
+
+  --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+  --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv COMMANDS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+  --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+  	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("rj", "Rejoins the game that you're in.", function()
+	SendM("[ZANEXX LCM]: Rejoining..")
+	game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("to", "Teleport to the chosen player", function(args)
+local target = findplr(args[1])
+
+for i,v in pairs(target) do
+local plr = v.Name
+local targetplayer = v.Character.HumanoidRootPart
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z)
+	     SendM("[ZANEXX LCM]: Teleported to "..pn.."")
+end
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("ws", "Changes Walkspeed", function(args)
+local val = args[1]
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val
+		SendM("[ZANEXX LCM]: Walkspeed set to "..val.."")
+end)
+	
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("jp", "Changes Jumppower", function(args)
+local val = args[1]
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = val
+	SendM("[ZANEXX LCM]: Jumppower set to "..val.."")
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("hunt", "loop find", function(args)
+local target = findplr(args[1])
+
+for i,v in pairs(target) do
+	local target = findplr(args[1])
+	local billgui = Instance.new('BillboardGui', v.Character.Head)
+	local textlab = Instance.new('TextLabel', billgui)
+	local nm = v.Name
+	
+	billgui.Name = "ESP"
+	billgui.Adornee  = epic
+	billgui.AlwaysOnTop = true
+	billgui.ExtentsOffset = Vector3.new(0, 3, 0)
+	billgui.Size = UDim2.new(0, 5, 0, 5)
+		
+	textlab.Name = 'Target'
+	textlab.BackgroundColor3 = Color3.new(255, 255, 255)
+	textlab.BackgroundTransparency = 1
+	textlab.BorderSizePixel = 0
+	textlab.Position = UDim2.new(0, 0, 0, -40)
+	textlab.Size = UDim2.new(1, 0, 10, 0)
+	textlab.Visible = true
+	textlab.ZIndex = 10
+	textlab.Font = 'ArialBold'
+	textlab.FontSize = 'Size18'
+	textlab.Text = nm
+	textlab.TextColor = BrickColor.new('Bright purple')
+	textlab.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+	textlab.TextStrokeTransparency = 0.6
+	
+	target.CharacterAdded:Connect(function(char)
+		wait()
+		local billgui = Instance.new('BillboardGui', char.Head)
+		local textlab = Instance.new('TextLabel', billgui)
+	
+		billgui.Name = "ESP"
+		billgui.Adornee  = epic
+		billgui.AlwaysOnTop = true
+		billgui.ExtentsOffset = Vector3.new(0, 3, 0)
+		billgui.Size = UDim2.new(0, 5, 0, 5)
+		
+		textlab.Name = 'Target'
+		textlab.BackgroundColor3 = Color3.new(255, 255, 255)
+		textlab.BackgroundTransparency = 1
+		textlab.BorderSizePixel = 0
+		textlab.Position = UDim2.new(0, 0, 0, -40)
+		textlab.Size = UDim2.new(1, 0, 10, 0)
+		textlab.Visible = true
+		textlab.ZIndex = 10
+		textlab.Font = 'ArialBold'
+		textlab.FontSize = 'Size18'
+		textlab.Text = nm
+		textlab.TextColor = BrickColor.new('Bright purple')
+		textlab.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+		textlab.TextStrokeTransparency = 0.6
+	end)
+end
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("fov", "Lets The LocalPlayer Change The FOV", function(args)
+	local val1 = args[1]
+	game:GetService'Workspace'.Camera.FieldOfView = val1
+	SendM("[ZANEXX LCM]: FOV Set to "..val1.."")
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("fly", "Lets The LocalPlayer Fly", function(args)
+SendM("[ZANEXX LCM]: Press F twice to start flying")
+Fly()
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("ffly", "Lets The LocalPlayer Fly Faster", function(args)
+SendM("[ZANEXX LCM]: Press F twice to start flying")
+FFly()
+end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+Zanexx("r", "Plays Your Wanted Audio On The Chosen Player", function(args)
+	local target = findplr(args[1])
+	
+	for i,v in pairs(target) do
+	local pn = v.Name
+	local num = args[2]
+	game.ReplicatedStorage.Event:FireServer("PlayRadio", v, num)
+	SendM("[ZANEXX LCM]: Playing "..num.." on "..pn.."")
+	end
+	end)
+	
+	-----------------------------------------------------------------------------------------------------------------
+	
+	Zanexx("gay", "Shows A Random Gay% On The Chosen Player(-s)", function(args)
+	local target = findplr(args[1])
+	
+	for i,v in pairs(target) do
+	local rnd = math.random(22, 101)
+	local pn = v.Name
+	if pn == "AXXTURELSHYNE" then 
+	game.Players:Chat("[ZANEXX V2]: AXXTURELSHYNE is 0% gay")
+	else
+	game.Players:Chat("[ZANEXX V2]: "..pn.." Is "..rnd.."% gay")
+	end
+	end
+	end)
+	
+	-----------------------------------------------------------------------------------------------------------------
+	  
+	Zanexx("rs", "Kills The LocalPlayer", function(args)
+	local lp = game.Players.LocalPlayer.Character
+	lp:BreakJoints()
+	SendM("[ZANEXX LCM]: Clappedddd xDDD")
+	end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("view", "Spectates The Chosen Player", function(args)
+		local target = findplr(args[1])
+	
+		for i,v in pairs(target) do
+		workspace.CurrentCamera.CameraSubject = v.Character
+		SendM("[ZANEXX LCM]: Fucking Pedo Smh..")
+		end
+		end)
+		
+	-----------------------------------------------------------------------------------------------------------------
+		
+	Zanexx("unview", "UnSpectates The Chosen Player", function(args)
+	game.workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+	end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("slock", "Enables Shiftlock For The LocalPlayer", function(args)
+		local plr = game.Players.LocalPlayer
+		plr.DevEnableMouseLock = true
+		SendM("[ZANEXX LCM]: Shiftlock Enabled")
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("nc", "Enables Noclip For The LocalPlayer Only", function(args)
+		local noclip = true 
+		char = game.Players.LocalPlayer.Character
+		while true do
+		if noclip == true then 
+		for _,v in pairs(char:children()) do 
+		pcall(function() 
+		if v.className == "Part" then v.CanCollide = false
+		elseif v.ClassName == "Model" then 
+		v.Head.CanCollide = false
+		end 
+		end)
+		end 
+		end 
+		game:service("RunService").Stepped:wait() 
+		end
+		SendM("[ZANEXX LCM]: Noclip Enabled, Say [cl] To Disable")
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("cl", "Disables Noclip", function(args)
+		local noclip = false
+		char = game.Players.LocalPlayer.Character
+		while true do
+		if noclip == false then 
+		for _,v in pairs(char:children()) do 
+		pcall(function() 
+		if v.className == "Part" then v.CanCollide = true
+		elseif v.ClassName == "Model" then 
+		v.Head.CanCollide = true
+		end 
+		end)
+		end 
+		end 
+		game:service("RunService").Stepped:wait()
+		end
+		SendM("[ZANEXX LCM]: Noclip Disabled")
+		end) 
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("cloak", "Makes The Chosen Player(-s) Invisible", function(args)
+		local target = findplr(args[1])
+	
+		for i,p in pairs(target) do
+		  local plrn = p.Name
+		  SendM("[ZANEXX LCM]: "..plrn.." Cloaked")
+		  local x = game.Workspace.Ignore.Players:FindFirstChild(target[1])
+		  game.ReplicatedStorage.Event:FireServer("Cloak", x)
+		end
+		end)
+		
+	-----------------------------------------------------------------------------------------------------------------
+		
+	  Zanexx("uncloak", "Makes The Chosen Player(-s) Invisible", function(args)
+		local target = findplr(args[1])
+	
+		for i,p in pairs(target) do
+		  local plrn = p.Name
+		  SendM("[ZANEXX LCM]: "..plrn.." Cloaked")
+		  local x = game.Workspace.Ignore.Players:FindFirstChild(target[1])
+		  game.ReplicatedStorage.Event:FireServer("UnCloak", x)
+		end
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+		Zanexx("rban", "Radio Bans The Chosen Player(-s)", function(args)
+			local target = findplr(args[1])
+	
+		    for i,v in pairs(target) do
+			local plrn = v.Name
+			SendM("[ZANEXX LCM]: "..plrn.." Radio-Banned")
+			if v:FindFirstChild("rban") then
+			v:FindFirstChild("rban"):Destroy()
+			end
+			local rban = Instance.new("BoolValue")
+			rban.Parent = v
+			rban.Value = true
+			rban.Name = "rban"
+			while wait() do
+			if v:FindFirstChild("rban") then
+			game.ReplicatedStorage.Event:FireServer("PlayRadio", v, lmfao)
+			end
+		end
+		end
+			end)
+			
+	-----------------------------------------------------------------------------------------------------------------
+			
+			Zanexx("unrban", "Removes The Radio Ban For The Chosen Player(-s)", function(args)
+			 local target = findplr(args[1])
+	
+		      for i,v in pairs(target) do
+			  local plrn = v.Name
+			  SendM("[ZANEXX LCM]: "..plrn.." UnRadio-Banned")
+			  if v:FindFirstChild("rban") then
+			  v:FindFirstChild("rban"):Destroy()
+			  end
+			  end
+			  end)
+
+	-----------------------------------------------------------------------------------------------------------------
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ COMMANDS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+
+
+
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv SERVERSIDE ABUSIVE COMMANDS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+  Zanexx("lk", "Loopkills The Chosen Player(-s)", function(args)
+	local target = findplr(args[1])
+	
+	for i,v in pairs(target) do
+	local nm = v.Name
+	SendM("[ZANEXX LCM]: Loopkilling "..nm.."")
+	if v:FindFirstChild("ml") then
+	v:FindFirstChild("ml"):Destroy()
+	end
+	local ml = Instance.new("BoolValue")
+	ml.Parent = v
+	ml.Value = true
+	ml.Name = "ml"
+	game:GetService("RunService").Heartbeat:Connect(function()
+	if v:FindFirstChild("ml") then
+	wait()
+	game.ReplicatedStorage.Event:FireServer("TPD", math.huge, v.Character.Humanoid)
+	end
+	end)
+	end
+	end)
+	
+		-----------------------------------------------------------------------------------------------------------------
+	
+	Zanexx("unlk", "Unloopkills The Chosen Player(-s)", function(args)
+	local target = findplr(args[1])
+	for i,v in pairs(target) do
+	local pn = v.Name
+	SendM("[ZANEXX LCM]: Unloopkilling "..pn.."..")
+	if v:FindFirstChild("ml") then
+	v:FindFirstChild("ml"):Destroy()
+	SendM("[ZANEXX LCM]: "..pn.." Unloopkilled")
+	end
+	end
+	end)
+	
+		-----------------------------------------------------------------------------------------------------------------
+	
+		Zanexx("lg", "Loopgods The Chosen Player(-s)", function(args)
+		local target = findplr(args[1])
+		
+		for i,v in pairs(target) do
+		local pn = v.Name
+		SendM("[ZANEXX LCM]: Loopgodding "..pn.."")
+		if v:FindFirstChild("lg") then
+		v:FindFirstChild("lg"):Destroy()
+		end
+		local lg = Instance.new("BoolValue")
+		lg.Parent = v
+		lg.Value = true
+		lg.Name = "lg"
+		if v:FindFirstChild("lg") then
+		while lg.Value == true do
+		wait()
+		game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, v.Character.Humanoid)
+		end
+		end
+		end
+		SendM("[ZANEXX LCM]: "..pn.." Loopgodded")
+		end)
+		
+		-----------------------------------------------------------------------------------------------------------------
+	
+		Zanexx("unlg", "Unloopgods The Chosen Player(-s)", function(args)
+		local target = findplr(args[1])
+		for i,v in pairs(target) do
+		local pn = v.Name
+		SendM("[ZANEXX LCM]: Breaking Loopgod For "..pn.."..")
+		if plr:FindFirstChild("lg") then
+		plr:FindFirstChild("lg"):Destroy()
+		wait(.5)
+		SendM("[ZANEXX LCM]: "..pn.."'s Loopgod broken")
+		end
+		end
+		end)
+		
+		-----------------------------------------------------------------------------------------------------------------
+		
+		Zanexx("slay", "Kills The Chosen Player(-s)", function(args)
+		local target = findplr(args[1])
+		
+		for i,v in pairs(target) do
+		local pn = v.Name
+		local lp = game.Players.LocalPlayer.Name
+		SendM("[ZANEXX LCM]: "..pn.." Has been slain by "..lp.."")
+		game.ReplicatedStorage.Event:FireServer("TPD", math.huge, v.Character.Humanoid)
+		end
+		end)
+	
+		-----------------------------------------------------------------------------------------------------------------
+	
+		Zanexx("poison", "Poisons The Chosen Player", function(args)
+		local target = findplr(args[1])
+			
+		for i,v in pairs(target) do
+		local pn = v.Name
+		SendM("[ZANEXX LCM]: "..pn.." Poisoned")
+		while wait() do
+		game.ReplicatedStorage.Event:FireServer("TPD", 1, v.Character.Humanoid)
+		if v.Character.Humanoid.Health == 0 then
+		break
+		end
+		end
+		end
+		end)
+			
+		-----------------------------------------------------------------------------------------------------------------
+			
+		Zanexx("lh", "Loop-Heals The Chosen Player Until They Reach 100", function(args)
+		local target = findplr(args[1])
+				
+		for i,v in pairs(target) do
+		local pn = v.Name
+		SendM("[ZANEXX LCM]: Loop-Healing "..pn.."")
+		local num = args[2]
+		while wait() do
+		game.ReplicatedStorage.Event:FireServer("TPD", -num, v.Character.Humanoid)
+		if v.Character.Humanoid.Health == 100 then
+		break
+		end
+		end
+		end
+		end)
+	
+		-----------------------------------------------------------------------------------------------------------------
+			
+		Zanexx("dmg", "Damages The Chosen Player (ex: ]dmg all 52.2137)]", function(args)
+		local target = findplr(args[1])
+			
+		for i,v in pairs(target) do
+		local pn = v.Name
+		local num = args[2]
+		SendM("[ZANEXX LCM]: "..pn.." Damaged For "..num.."")
+		game.ReplicatedStorage.Event:FireServer("TPD", num, v.Character.Humanoid)
+		end
+		end)
+			
+		-----------------------------------------------------------------------------------------------------------------
+			
+		Zanexx("heal", "Heals The Chosen Player (ex: ]Heal all 52.2137)]", function(args)
+		local target = findplr(args[1])
+			
+		for i,v in pairs(target) do
+		local pn = v.Name
+		local num = args[2]
+		SendM("[ZANEXX LCM]: "..pn.." Healed For "..num.."")
+		game.ReplicatedStorage.Event:FireServer("TPD", -num, v.Character.Humanoid)
+		end
+		end)
+	
+		-----------------------------------------------------------------------------------------------------------------
+	
+		Zanexx("g", "Gods The Chosen Player(-s)", function(args)
+		local target = findplr(args[1])
+				
+		for i,v in pairs(target) do
+		local pn = v.Name
+		SendM("[ZANEXX LCM]: "..pn.." Godded")
+		game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, v.Character.Humanoid)
+		end
+		end)
+				
+		
+		-----------------------------------------------------------------------------------------------------------------
+	
+	--<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+	--<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ SERVERSIDE ABUSIVE COMMANDS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+	--<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+
+  	--<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+  	--<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv MISC COMMANDS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+  	--<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+
+
+Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything ( !, @, #, $...)", function(args)
+	SendM("[ZANEXX LCM]: Prefix Before: "..PREFIX.."")
+	  local pargs = args[1]
+	  PREFIX = pargs
+	  SendM("[ZANEXX LCM]: Prefix Changed To: "..PREFIX.."")
+	  
+	  if PREFIX == "!" then
+	  SendM("[ZANEXX LCM]: Prefix Set To [!] (Matts Admin)")
+	  
+	  elseif PREFIX == "." then
+	  SendM("[ZANEXX LCM]: Prefix Set To [.] (Faxng Admin)")
+	  
+	  elseif PREFIX == ":" then
+	  SendM("[ZANEXX LCM]: Prefix Set To [:] (Aidez)")
+
+	  elseif PREFIX == ";" then
+	  SendM("[ZANEXX LCM]: Prefix Set To [;] (DrPoppa's Admin)")
+
+	  elseif PREFIX == "/" then
+	  SendM("[ZANEXX LCM]: Prefix Set To [/] (Terminal X)")
+
+	  elseif PREFIX == "-" then
+	  SendM("[ZANEXX LCM]: Prefix Set To [-] (Fates Admin)")
+
+	  elseif PREFIX == "+" then
+	  SendM("[ZANEXX LCM]: Prefix Set To [+] (Clouds Admin)")
+	
+	  elseif PREFIX == "'" then
+	  SendM("[ZANEXX LCM]: Prefix Set To ['] (q5ep's Admin)")
+
+	  elseif PREFIX == "]" then
+	  SendM("[ZANEXX LCM]: Prefix Set To []] (ZANEXX)")
+	  
+	  elseif PREFIX == "none" then
+		SendM("[ZANEXX LCM]: Prefix Set To [None]")
+		PREFIX = ""
+	  end
+	  end)
+
+
+	Zanexx("cmds", "Opens The Commands GUI", function(args)
+		loadstring(game:HttpGet'https://raw.githubusercontent.com/IllegalInfo/8/master/CommandListTM')()
+		end)
+			  
+	-----------------------------------------------------------------------------------------------------------------
+			  
+	Zanexx("roles", "Opens The Role GUI", function(args)
+		loadstring(game:HttpGet'https://pastebin.com/raw/bkJkeBth')()
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("cc", "Clears The Chat", function(args)
+		loadstring(game:HttpGet'https://hastebin.com/raw/uruzulihaf')()
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+	
+	Zanexx("advertise", "Fills The Screen With My Advm", function(args)
+		loadstring(game:HttpGet'https://pastebin.com/raw/zTzZsWZd')()
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("KnifeGUI", "Opens My Old Knife GUI", function(args)
+		loadstring(game:HttpGet'https://pastebin.com/raw/HpKBHMmB')()
+		end)
+
+	----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("annoy", "Annoys The Chosen Player", function(args)
+	local plrs = game:GetService("Players")
+	local grav = Instance.new("RocketPropulsion")
+	local target = findplr(args[1])
+
+	for i,v in pairs(target) do
+	local pn = v.Name
+	SendM("[ZANEXX LCM]: Annoying "..pn..".")
+	
+	local noclip = true 
+	char = game.Players.LocalPlayer.Character
+	while true do
+	if noclip == true then 
+	for _,v in pairs(char:children()) do 
+	pcall(function() 
+	if v.className == "Part" then v.CanCollide = false
+	elseif v.ClassName == "Model" then 
+	v.Head.CanCollide = false
+	end 
+	end)
+	end 
+	end 
+	game:service("RunService").Stepped:wait() 
+	end
+
+	grav.ThrustP = 5
+    grav.MaxSpeed = 2000000
+	grav.MaxThrust = 1800000
+	grav:fire()
+
+	grav.Parent = plrs.LocalPlayer.Character.Torso
+	grav.Target = v.Character.Torso
+	end
+	end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+
+	-----------------------------------------------------------------------------------------------------------------
+
+		Zanexx("bg", "Brings The Gun To The LocalPlayer", function(args)
+			game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			wait(1)
+			game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			wait(1)
+			game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			SendM("[ZANEXX LCM]: Gun Teleported")
+			end)
+	
+		-----------------------------------------------------------------------------------------------------------------
+
+		Zanexx("sptrap", "Teleports The LocalPlayer To 4 Different Corners n Auto Throws Tesla Knives", function(args)
+				SendM("[ZANEXX LCM]: Failed To Throw, Please Re-Equip Your Knife")
+		SendM("[ZANEXX LCM]: Press T To Stop The SpawnTrap Loop")
+		local player = game.Players.LocalPlayer 
+		local pos = player.Character.HumanoidRootPart.CFrame
+	  
+		local exclusivecliqueisdaddy = Instance.new("BoolValue")
+		exclusivecliqueisdaddy.Parent = game.workspace
+		exclusivecliqueisdaddy.Value = true
+		exclusivecliqueisdaddy.Name = "exclusivecliqueisdaddy"
+		
+		  loadstring(game:HttpGet(('https://pastebin.com/raw/CdUMRVmq'),true))()
+		  for i,v in pairs(player.Backpack:GetDescendants()) do
+		  if v:IsA("Tool") then
+		  v.Parent = player.Character
+		
+		player.CameraMode = 1
+		wait(.2)
+		while exclusivecliqueisdaddy.Value == true do
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(54.5063286, 22.1997204, -67.2636566, -0.999139071, 0, -0.041487325, 0, 1, 0, 0.041487325, 0, -0.999139071)
+		mouse1click()
+		wait()
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(54.1307602, 22.1997204, -86.355484, 0.0665355325, -1.61819109e-08, -0.997784078, 1.01435901e-07, 1, -9.45376755e-09, 0.997784078, -1.00582113e-07, 0.0665355325)
+		mouse1click()
+		wait()
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(28.9910889, 22.1997204, -86.3085785, 0.697867095, -3.1538633e-08, 0.716227233, 2.90973254e-08, 1, 1.56829589e-08, -0.716227233, 9.89567539e-09, 0.697867095)
+		mouse1click()
+		wait()
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(28.8613205, 22.1997204, -67.6521835, -0.0147577161, 0, 0.999891102, 0, 1, 0, -0.999891102, 0, -0.0147577161)
+		mouse1click()
+		wait()
+	  
+		local mouse = game.Players.LocalPlayer:GetMouse()
+		mouse.KeyDown:connect(function(t)	
+		  if t == "t" then	
+		game.workspace:FindFirstChild("exclusivecliqueisdaddy").Value = false
+		game.workspace:FindFirstChild("exclusivecliqueisdaddy"):Destroy()
+		end
+	  end)
+		end
+		player.CameraMode = 0
+		t.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+		end
+		end
+	 	SendM("[ZANEXX LCM]: Done")
+		end)
+
+	-----------------------------------------------------------------------------------------------------------------
+
+	Zanexx("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", function(args)
+		SendM("-Tesla")
+		SendM("-Illum")
+		SendM("-Quick")
+		SendM("-Laser")
+		SendM("-Yt")
+		SendM("-Norelgun")
+		end)
+		
+	-----------------------------------------------------------------------------------------------------------------
+
+	--<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+	--<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MISC COMMANDS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+	--<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+
+
+
+for i, v in pairs(ZANEXX.Commands) do
+	if type(v[2]) == "string" then
+		print("("..PREFIX..v[1]..") - {"..v[2].."}")
+	else
+		print(PREFIX..v[1])
+	end
+end
+
+game:GetService("Workspace").Lobby.tay:Destroy()
+game:GetService("Workspace").Lobby.TwistedRadio:Destroy()
+game:GetService("Workspace").Lobby.MVPDoor:Destroy()
+game:GetService("Workspace").Creators:Destroy()
+game:GetService("Workspace").Lobby.BuyAni:Destroy()
+game:GetService("Workspace").Lobby.BuyAni2:Destroy()
+game:GetService("Workspace").Lobby["Undead Teddy"]:Destroy()
+game:GetService("Workspace").Lobby["Zombie Owl"]:Destroy()
+
+local Creds = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local Gradient = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+
+Creds.Name = "Creds"
+Creds.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Creds.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Creds.ResetOnSpawn = false
+
+TextLabel.Parent = Creds
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.32077837, 0)
+TextLabel.Size = UDim2.new(0, 242, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Credits To Matt1QQ For Helping With The Script."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+
+Gradient.Name = "Gradient"
+Gradient.Parent = Creds
+Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(-5.64813627e-06, 0, 0.367418408, -19.5)
+Gradient.Size = UDim2.new(0, 256, 0, 2)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(55, 206, 223)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(91, 136, 229))}
+UIGradient.Parent = Gradient
+
+-- Scripts:
+
+local function YNHVY_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local changeSpeed = 10
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(52, 116, 235) 
+	                      spawn(function()
+	                        local i = -1
+	                        while true do
+	                            for i=-1,1,1/changeSpeed do
+	                            local f = math.abs(i)
+	                            script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                                255 * (color1.r + (color2.r - color1.r) * f),
+	                                255 * (color1.g + (color2.g - color1.g) * f), 
+	                                255 * (color1.b + (color2.b - color1.b) * f))
+	                            wait(0.05)
+	            end
+	            end
+	            end)
+end
+coroutine.wrap(YNHVY_fake_script)()
+
+SendM("[exc#1444]: Aight faggots, i haven't been updating this shit admin so um here u go")
+SendM("[UPDATES]: Updated Loopgod")
+SendM("[UPDATES]: Updated Loopkill")
+SendM("[UPDATES]: Compressed the script so it loads even faster (idk y i did it but hf)")
+SendM("[UPDATES]: Fixed Slay - doesn't bug out anymore")
+SendM("[UPDATES]: Fixed the whitelist (i think)")
+SendM("[UPDATES]: That's it cuz this admin is fucked up n im not gonna update it anymo, that was the last update. hopefully.")
+
+
+wait(10)
+
+
+SendM("[exc#1444]: https://soundcloud.com/axxturel/prynce-axxturel-12-barxx-freexxtyle-prod-himself-mannaboyz-xxunittt")
+
+
+wait(15)
+
+
+SendM("[exc#1444]: yes i quit roblox u idiot. quit asking me that.")
+
+
+wait(10)
+
+
+SendM("[exc#1444]: Sofies (egvrIs, bradleycreamedinme) pussy hairy n disgustinggg :vomit: also acts like she doesnt od eboys LOOOL")
+
+
+wait(20)
+
+
+SendM("[exc#1444]: https://soundcloud.com/axxturel/axxturel-planet-of-the-xxymbiotez-prod-axxturel-xxunit-k6r-sigilkore")
+
+
+wait(15)
+
+
+SendM("[exc#1444]: if this gets leaked again then um im not putting it back up :]]]]]]]]]]]]]]]]")
+
+wait(15)
+
+SendM("[exc#1444]: im cute")
