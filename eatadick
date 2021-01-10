@@ -243,27 +243,9 @@ coroutine.wrap(UDJWXHL_fake_script)()
 				   end
 				  end
 				  
-				  elseif string.find(x.Text, "SenpaiiBailey") then
-					  x.Text = string.gsub(x.Text, "SenpaiiBailey", "[VIP] SenpaiiBaiIey" )
-					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
-			  
-				  elseif string.find(x.Text, "lozUwUzol") then
-					  x.Text = string.gsub(x.Text, "lozUwUzol", "[VIP] IozUwUzoI")
-					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
-  
-  
-				  elseif string.find(x.Text, "AWPISOPAF") then
-					  x.Text = string.gsub(x.Text, "AWPISOPAF", "[VIP] AWPlSOPAF")
-					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
-			  
-			  
-				  elseif string.find(x.Text, "LILEDDY03") then
-					  x.Text = string.gsub(x.Text, "LILEDDY03", "LlLEDDY03" )
-					  x.TextColor3 = Color3.fromRGB(52, 128, 235)
 				  
-				  
-				  elseif string.find(x.Text, "qtiepies") then 
-					  x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
+				  elseif string.find(x.Text,"iowncarson") then 
+					  x.Text = string.gsub(x.Text, "iowncarson", "[chunky nigga] Emmie") 
 					   x.TextStrokeTransparency = .1
 						x.TextColor3 = Color3.fromRGB(255, 255, 255)
 						spawn(function()
@@ -1391,33 +1373,13 @@ local function YNHVY_fake_script() -- TextLabel.LocalScript
 	            end
 	            end)
 end
-coroutine.wrap(YNHVY_fake_script)()
 
-SendM("[exc#1444]: Aight faggots, i haven't been updating this shit admin so um here u go")
 SendM("[UPDATES]: Updated Loopgod")
 SendM("[UPDATES]: Updated Loopkill")
 SendM("[UPDATES]: Compressed the script so it loads even faster (idk y i did it but hf)")
 SendM("[UPDATES]: Fixed Slay - doesn't bug out anymore")
 SendM("[UPDATES]: Fixed the whitelist (i think)")
-SendM("[UPDATES]: That's it cuz this admin is fucked up n im not gonna update it anymo, that was the last update. hopefully.")
-
-
-wait(10)
-
-
-SendM("[exc#1444]: https://soundcloud.com/axxturel/prynce-axxturel-12-barxx-freexxtyle-prod-himself-mannaboyz-xxunittt")
-
-
-wait(15)
-
-
-SendM("[exc#1444]: yes i quit roblox u idiot. quit asking me that.")
-
-
-wait(10)
-
-
-SendM("[exc#1444]: Sofies (egvrIs, bradleycreamedinme) pussy hairy n disgustinggg :vomit: also acts like she doesnt od eboys LOOOL")
+SendM("[UPDATES]: That's it cuz this admin is fucked up n im not gonna update it anymo, that was the last update.")
 
 
 wait(20)
